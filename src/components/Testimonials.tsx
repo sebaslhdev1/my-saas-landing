@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const testimonials = [
   {
     quote:
@@ -43,7 +45,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <FadeIn className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">Testimonials</span>
           <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
             Loved by teams that ship
@@ -51,14 +53,14 @@ export default function Testimonials() {
           <p className="mt-4 text-lg text-gray-500">
             Don&apos;t take our word for it — here&apos;s what real teams say after their first sprint with TaskAI.
           </p>
-        </div>
+        </FadeIn>
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((t) => (
+          {testimonials.map((t, index) => (
+            <FadeIn key={t.name} delay={index * 0.15} direction="up">
             <div
-              key={t.name}
-              className="flex flex-col gap-6 bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-md transition-shadow duration-200"
+              className="flex flex-col gap-6 bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-md transition-shadow duration-200 h-full"
             >
               {/* Stars */}
               <div className="flex gap-1 text-amber-400">
@@ -83,6 +85,7 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 

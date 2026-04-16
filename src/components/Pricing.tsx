@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const plans = [
   {
     name: "Starter",
@@ -78,7 +80,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <FadeIn className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">Pricing</span>
           <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
             Simple, transparent pricing
@@ -86,14 +88,14 @@ export default function Pricing() {
           <p className="mt-4 text-lg text-gray-500">
             Start free. Upgrade when your team is ready. No hidden fees.
           </p>
-        </div>
+        </FadeIn>
 
         {/* Plans grid */}
         <div className="grid md:grid-cols-3 gap-8 items-stretch">
-          {plans.map((plan) => (
+          {plans.map((plan, index) => (
+            <FadeIn key={plan.name} delay={index * 0.15} direction="up">
             <div
-              key={plan.name}
-              className={`relative flex flex-col rounded-2xl p-8 ${
+              className={`relative flex flex-col rounded-2xl p-8 h-full ${
                 plan.popular
                   ? "bg-indigo-600 text-white shadow-2xl shadow-indigo-200 scale-105"
                   : "bg-white border border-gray-100 shadow-sm"
@@ -157,6 +159,7 @@ export default function Pricing() {
               </ul>
 
             </div>
+            </FadeIn>
           ))}
         </div>
 

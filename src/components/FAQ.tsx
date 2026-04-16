@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import FadeIn from "@/components/FadeIn";
 
 const faqs = [
   {
@@ -47,7 +48,7 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">FAQ</span>
           <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
             Frequently asked questions
@@ -59,15 +60,15 @@ export default function FAQ() {
             </a>
             .
           </p>
-        </div>
+        </FadeIn>
 
         {/* Accordion */}
         <div className="flex flex-col gap-3">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
+              <FadeIn key={faq.question} delay={index * 0.07}>
               <div
-                key={faq.question}
                 className={`bg-white rounded-2xl border transition-all duration-200 ${
                   isOpen ? "border-indigo-200 shadow-sm" : "border-gray-100"
                 }`}
@@ -100,6 +101,7 @@ export default function FAQ() {
                   </div>
                 )}
               </div>
+              </FadeIn>
             );
           })}
         </div>
