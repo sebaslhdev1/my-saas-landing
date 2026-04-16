@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import FadeIn from "@/components/FadeIn";
+import FadeIn from "@/components/ui/FadeIn";
 
 const faqs = [
   {
