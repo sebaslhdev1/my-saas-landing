@@ -30,6 +30,11 @@ const faqs = [
       "No credit card required. You get full access to the Pro plan for 14 days, completely free. We'll remind you 3 days before the trial ends, and you only upgrade if you choose to.",
   },
   {
+    question: "Does TaskAI work for remote teams?",
+    answer:
+      "Yes — TaskAI is built with remote-first teams in mind. All updates, priorities, and reports are async and accessible from anywhere, so your team stays aligned whether they're across the hall or across the globe.",
+  },
+  {
     question: "How many integrations does TaskAI support?",
     answer:
       "TaskAI currently integrates with 50+ tools including Slack, GitHub, Jira, Notion, Figma, Google Calendar, Zoom, HubSpot, and more. New integrations are added every month — and you can request specific ones via our public roadmap.",
