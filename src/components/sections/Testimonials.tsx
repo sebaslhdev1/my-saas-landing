@@ -41,16 +41,16 @@ const StarIcon = () => (
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white dark:bg-gray-900 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
         <FadeIn className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">Testimonials</span>
-          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
+          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">Testimonials</span>
+          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             Loved by teams that ship
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
             Don&apos;t take our word for it — here&apos;s what real teams say after their first sprint with TaskAI.
           </p>
         </FadeIn>
@@ -59,9 +59,7 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
             <FadeIn key={t.name} delay={index * 0.15} direction="up">
-            <div
-              className="flex flex-col gap-6 bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-md transition-shadow duration-200 h-full"
-            >
+            <div className="flex flex-col gap-6 bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-200 h-full">
               {/* Stars */}
               <div className="flex gap-1 text-amber-400">
                 {Array.from({ length: t.stars }).map((_, i) => (
@@ -70,17 +68,17 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <blockquote className="flex-1 text-gray-700 leading-relaxed">
+              <blockquote className="flex-1 text-gray-700 dark:text-gray-300 leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4 pt-2 border-t border-gray-100">
+              <div className="flex items-center gap-4 pt-2 border-t border-gray-100 dark:border-gray-700">
                 <div className={`w-11 h-11 ${t.color} rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0`}>
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-900">{t.name}</p>
+                  <p className="text-sm font-bold text-gray-900 dark:text-white">{t.name}</p>
                   <p className="text-xs text-gray-400">{t.role} · {t.company}</p>
                 </div>
               </div>
@@ -90,9 +88,9 @@ export default function Testimonials() {
         </div>
 
         {/* Social proof bar */}
-        <div className="mt-16 flex flex-wrap justify-center items-center gap-6 text-gray-300 text-sm font-semibold uppercase tracking-widest">
+        <div className="mt-16 flex flex-wrap justify-center items-center gap-6 text-gray-300 dark:text-gray-600 text-sm font-semibold uppercase tracking-widest">
           {["Finova", "Scaleform", "Orbyt Agency", "Driftly", "Nexlane", "Pulsar Labs"].map((brand) => (
-            <span key={brand} className="hover:text-gray-400 transition-colors cursor-default">
+            <span key={brand} className="hover:text-gray-400 dark:hover:text-gray-400 transition-colors cursor-default">
               {brand}
             </span>
           ))}

@@ -59,16 +59,16 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="bg-gray-50 py-24">
+    <section id="features" className="bg-gray-50 dark:bg-gray-800 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
         <FadeIn className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">Features</span>
-          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
+          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">Features</span>
+          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             Everything your team needs to move faster
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
             TaskAI handles the planning overhead so your team can focus on building — not coordinating.
           </p>
         </FadeIn>
@@ -77,12 +77,12 @@ export default function Features() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <FadeIn key={feature.title} delay={index * 0.1} direction="up">
-              <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 h-full">
-                <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-5">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 h-full">
+                <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 rounded-xl flex items-center justify-center mb-5">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-500 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{feature.description}</p>
               </div>
             </FadeIn>
           ))}

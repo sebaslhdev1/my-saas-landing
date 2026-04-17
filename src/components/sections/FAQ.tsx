@@ -49,18 +49,18 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="bg-gray-50 py-24">
+    <section id="faq" className="bg-gray-50 dark:bg-gray-800 py-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
         <FadeIn className="text-center mb-16">
-          <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">FAQ</span>
-          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
+          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">FAQ</span>
+          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
             Can&apos;t find what you&apos;re looking for?{" "}
-            <a href="mailto:hello@taskai.io" className="text-indigo-600 hover:underline font-medium">
+            <a href="mailto:hello@taskai.io" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">
               Chat with our team
             </a>
             .
@@ -74,8 +74,8 @@ export default function FAQ() {
             return (
               <FadeIn key={faq.question} delay={index * 0.07}>
               <div
-                className={`bg-white rounded-2xl border transition-all duration-200 ${
-                  isOpen ? "border-indigo-200 shadow-sm" : "border-gray-100"
+                className={`bg-white dark:bg-gray-900 rounded-2xl border transition-all duration-200 ${
+                  isOpen ? "border-indigo-200 dark:border-indigo-700 shadow-sm" : "border-gray-100 dark:border-gray-700"
                 }`}
               >
                 <button
@@ -83,10 +83,10 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className={`text-base font-semibold ${isOpen ? "text-indigo-600" : "text-gray-900"}`}>
+                  <span className={`text-base font-semibold ${isOpen ? "text-indigo-600 dark:text-indigo-400" : "text-gray-900 dark:text-white"}`}>
                     {faq.question}
                   </span>
-                  <span className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-colors ${isOpen ? "bg-indigo-600 text-white" : "bg-gray-100 text-gray-400"}`}>
+                  <span className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-colors ${isOpen ? "bg-indigo-600 text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-400"}`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
@@ -102,7 +102,7 @@ export default function FAQ() {
 
                 {isOpen && (
                   <div className="px-6 pb-5">
-                    <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
+                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>

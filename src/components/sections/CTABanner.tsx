@@ -1,6 +1,6 @@
 export default function CTABanner() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white dark:bg-gray-900 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-indigo-600 rounded-3xl px-8 py-20 text-center overflow-hidden">
 

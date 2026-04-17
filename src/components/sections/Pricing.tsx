@@ -76,16 +76,16 @@ const XIcon = () => (
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-gray-50 py-24">
+    <section id="pricing" className="bg-gray-50 dark:bg-gray-800 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
         <FadeIn className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-indigo-600 uppercase tracking-widest">Pricing</span>
-          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 tracking-tight">
+          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">Pricing</span>
+          <h2 className="mt-3 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             Simple, transparent pricing
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
             Start free. Upgrade when your team is ready. No hidden fees.
           </p>
         </FadeIn>
@@ -97,8 +97,8 @@ export default function Pricing() {
             <div
               className={`relative flex flex-col rounded-2xl p-8 h-full ${
                 plan.popular
-                  ? "bg-indigo-600 text-white shadow-2xl shadow-indigo-200 scale-105"
-                  : "bg-white border border-gray-100 shadow-sm"
+                  ? "bg-indigo-600 text-white shadow-2xl shadow-indigo-200 dark:shadow-indigo-900 scale-105"
+                  : "bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 shadow-sm"
               }`}
             >
               {/* Popular badge */}
@@ -110,17 +110,17 @@ export default function Pricing() {
 
               {/* Plan name & description */}
               <div className="mb-6">
-                <h3 className={`text-lg font-bold mb-1 ${plan.popular ? "text-white" : "text-gray-900"}`}>
+                <h3 className={`text-lg font-bold mb-1 ${plan.popular ? "text-white" : "text-gray-900 dark:text-white"}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm ${plan.popular ? "text-indigo-200" : "text-gray-500"}`}>
+                <p className={`text-sm ${plan.popular ? "text-indigo-200" : "text-gray-500 dark:text-gray-400"}`}>
                   {plan.description}
                 </p>
               </div>
 
               {/* Price */}
               <div className="flex items-end gap-1 mb-8">
-                <span className={`text-5xl font-extrabold ${plan.popular ? "text-white" : "text-gray-900"}`}>
+                <span className={`text-5xl font-extrabold ${plan.popular ? "text-white" : "text-gray-900 dark:text-white"}`}>
                   {plan.price}
                 </span>
                 {plan.period && (
@@ -142,10 +142,10 @@ export default function Pricing() {
               <ul className="flex flex-col gap-3 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
-                    <span className={plan.popular ? "text-indigo-200" : "text-indigo-600"}>
+                    <span className={plan.popular ? "text-indigo-200" : "text-indigo-600 dark:text-indigo-400"}>
                       <CheckIcon />
                     </span>
-                    <span className={`text-sm ${plan.popular ? "text-indigo-100" : "text-gray-600"}`}>
+                    <span className={`text-sm ${plan.popular ? "text-indigo-100" : "text-gray-600 dark:text-gray-300"}`}>
                       {feature}
                     </span>
                   </li>
@@ -164,7 +164,7 @@ export default function Pricing() {
         </div>
 
         {/* Bottom note */}
-        <p className="text-center text-sm text-gray-400 mt-10">
+        <p className="text-center text-sm text-gray-400 dark:text-gray-500 mt-10">
           All plans include a 14-day free trial. No credit card required.
         </p>
 
