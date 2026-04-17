@@ -113,7 +113,7 @@ export default function Hero() {
                       key={task.label}
                       className="flex items-center gap-3 bg-gray-50 dark:bg-gray-900/50 rounded-xl px-4 py-3 border border-gray-100 dark:border-gray-700"
                     >
-                      <input type="checkbox" className="w-4 h-4 accent-indigo-600 shrink-0" readOnly />
+                      <input type="checkbox" className="w-4 h-4 accent-indigo-600 shrink-0" readOnly aria-hidden="true" tabIndex={-1} />
                       <span className="flex-1 text-sm font-medium text-gray-800 dark:text-gray-200 truncate">{task.label}</span>
                       <span className={`text-xs font-semibold px-2.5 py-1 rounded-full shrink-0 ${task.color}`}>
                         {task.priority}

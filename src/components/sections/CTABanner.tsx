@@ -23,7 +23,7 @@ export default function CTABanner() {
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
               Ready to transform how your team works?
             </h2>
-            <p className="text-lg text-indigo-200 leading-relaxed">
+            <p className="text-lg text-indigo-100 leading-relaxed">
               Join 5,000+ teams already using TaskAI to ship faster, stress less, and stay in sync — starting today, for free.
             </p>
 
@@ -42,7 +42,7 @@ export default function CTABanner() {
               </a>
             </div>
 
-            <p className="text-indigo-300 text-sm">
+            <p className="text-indigo-100 text-sm">
               No credit card required · 14-day free trial · Cancel anytime
             </p>
           </div>

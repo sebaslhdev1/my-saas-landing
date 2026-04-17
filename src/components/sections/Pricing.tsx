@@ -113,7 +113,7 @@ export default function Pricing() {
                 <h3 className={`text-lg font-bold mb-1 ${plan.popular ? "text-white" : "text-gray-900 dark:text-white"}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm ${plan.popular ? "text-indigo-200" : "text-gray-500 dark:text-gray-400"}`}>
+                <p className={`text-sm ${plan.popular ? "text-indigo-100" : "text-gray-500 dark:text-gray-400"}`}>
                   {plan.description}
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function Pricing() {
                   {plan.price}
                 </span>
                 {plan.period && (
-                  <span className={`text-sm mb-2 ${plan.popular ? "text-indigo-200" : "text-gray-400"}`}>
+                  <span className={`text-sm mb-2 ${plan.popular ? "text-indigo-100" : "text-gray-400"}`}>
                     {plan.period}
                   </span>
                 )}
