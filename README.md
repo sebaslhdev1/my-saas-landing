@@ -106,6 +106,17 @@ All scroll animations use the reusable `FadeIn` wrapper component:
 
 Animations trigger once when the element enters the viewport (`whileInView` + `once: true`).
 
+## Lighthouse Scores
+
+Audited on production (Vercel) with no throttling.
+
+| Category | Score |
+|---|---|
+| Performance | 99 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
 ## Deployment
 
 Deployed on Vercel with automatic deployments on every push to `main`. Feature branches get preview URLs automatically.

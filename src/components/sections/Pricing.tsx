@@ -151,9 +151,9 @@ export default function Pricing() {
                   </li>
                 ))}
                 {plan.missing.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 opacity-40">
-                    <XIcon />
-                    <span className="text-sm text-gray-400">{feature}</span>
+                  <li key={feature} className="flex items-center gap-3">
+                    <span aria-hidden="true"><XIcon /></span>
+                    <span className="text-sm text-gray-500">{feature}</span>
                   </li>
                 ))}
               </ul>

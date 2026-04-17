@@ -17,8 +17,8 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-24">
       {/* Background gradient blobs */}
-      <div className="absolute -top-40 -right-32 w-[600px] h-[600px] bg-indigo-100 dark:bg-indigo-900 rounded-full blur-3xl opacity-50 pointer-events-none" />
-      <div className="absolute -bottom-40 -left-32 w-[500px] h-[500px] bg-violet-100 dark:bg-violet-900 rounded-full blur-3xl opacity-40 pointer-events-none" />
+      <div className="absolute -top-40 -right-32 w-[600px] h-[600px] bg-indigo-100 dark:bg-indigo-900 rounded-full blur-3xl opacity-50 pointer-events-none" style={{ willChange: "filter" }} />
+      <div className="absolute -bottom-40 -left-32 w-[500px] h-[500px] bg-violet-100 dark:bg-violet-900 rounded-full blur-3xl opacity-40 pointer-events-none" style={{ willChange: "filter" }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -31,14 +31,12 @@ export default function Hero() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.1}>
-              <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight">
-                AI Task Management for{" "}
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-violet-600">
-                  High-Performance Teams
-                </span>
-              </h1>
-            </FadeIn>
+            <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight">
+              AI Task Management for{" "}
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-violet-600">
+                High-Performance Teams
+              </span>
+            </h1>
 
             <FadeIn delay={0.2}>
               <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">

@@ -88,9 +88,9 @@ export default function Testimonials() {
         </div>
 
         {/* Social proof bar */}
-        <div className="mt-16 flex flex-wrap justify-center items-center gap-6 text-gray-300 dark:text-gray-600 text-sm font-semibold uppercase tracking-widest">
+        <div className="mt-16 flex flex-wrap justify-center items-center gap-6 text-gray-500 dark:text-gray-500 text-sm font-semibold uppercase tracking-widest">
           {["Finova", "Scaleform", "Orbyt Agency", "Driftly", "Nexlane", "Pulsar Labs"].map((brand) => (
-            <span key={brand} className="hover:text-gray-400 dark:hover:text-gray-400 transition-colors cursor-default">
+            <span key={brand} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors cursor-default">
               {brand}
             </span>
           ))}
